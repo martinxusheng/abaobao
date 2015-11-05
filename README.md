@@ -31,7 +31,8 @@ abaobaPay(function(bridge) {
 			'price': 100
 		};
 		bridge.send(data, function(responseData) {
-			log('JS got response', responseData)
+			//如果调用成功返回data
+			consolog.log(responseData);
 		})
 	}
 })
