@@ -32,8 +32,16 @@ abaobaPay(function(bridge) {
 		};
 		bridge.send(data, function(responseData) {
 			//如果调用成功返回data
-			consolog.log(responseData);
+			console.log(JSON.stringif(responseData));
 		})
 	}
+})
+</pre>
+
+第三部：支付成功返回信息
+<pre>
+bridge.callHandler('testObjcCallback', function(response) {
+	//客户端返回信息
+	console.log(JSON.stringif(response));
 })
 </pre>
