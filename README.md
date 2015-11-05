@@ -11,7 +11,11 @@ function abaobaPay(callback) {
 			callback(WebViewJavascriptBridge)
 		}, false)
 	}
-}
+};
+//通过 abaobaPay 处理事件
+abaobaPay(function(bridge) {
+	//do something
+})
 </pre>
 
 <b>第二部：页面触发支付按钮</b>
@@ -20,20 +24,13 @@ function abaobaPay(callback) {
 proid       String          商品编号
 price       Float           商品价格
 
-abaobaPay(function(bridge) {
-	var button = document.getElementById('paybtn');
-	button.onclick = function(e) {
-		e.preventDefault();
-		//产品明细
-		var data = {
-			'proid': 'P001',
-			'price': 100
-		};
-		bridge.send(data, function(responseData) {
-			//如果调用成功返回data
-			console.log(JSON.stringif(responseData));
-		})
-	}
+var data = {
+	'proid': 'P001',
+	'price': 100
+};
+bridge.send(data, function(responseData) {
+	//如果调用成功返回data
+	console.log(JSON.stringif(responseData));
 })
 </pre>
 
