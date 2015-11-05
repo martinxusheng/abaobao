@@ -12,6 +12,7 @@ function abaobaPay(callback) {
 		}, false)
 	}
 };
+
 //通过 abaobaPay 处理事件
 abaobaPay(function(bridge) {
 	//do something
