@@ -1,7 +1,7 @@
 # abaobao
 爱宝宝支付
 
-<p><b>第一步：页面引入js方法</b></p>
+<p><b>#1：页面引入js方法</b></p>
 <pre>
 function abaobaPay(callback) {
 	if (window.WebViewJavascriptBridge) {
@@ -19,7 +19,7 @@ abaobaPay(function(bridge) {
 })
 </pre>
 
-<b>第二部：页面触发支付按钮</b>
+<b>#2：页面触发支付按钮</b>
 <p><b>参数说明</b></p>
 <pre>
 <b>参数</b>        <b>参数类型</b>        <b>说明</b>
@@ -36,7 +36,7 @@ bridge.send(data, function(responseData) {
 })
 </pre>
 
-<b>第三部：支付成功返回信息</b>
+<b>#3：支付成功返回信息</b>
 <p><b>返回说明</b></p>
 <pre>
 <b>参数</b>        <b>参数类型</b>        <b>说明</b>
